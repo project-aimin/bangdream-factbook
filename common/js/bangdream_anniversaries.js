@@ -125,9 +125,9 @@ function dispDateNow(){
  var timezoneNow0 = dateNow.getTimezoneOffset();
  var timezoneHours = ((timezoneNow0 <= 0) ? "+" : "-")+Math.floor(-timezoneNow0 / 60);
  var timezoneMins = Math.abs(timezoneNow0) % 60;
- timezoneMins = (timezoneMins < 10) ? "0"+timezoneMins : timezoneMins;
+ timezoneMins = padzero(timezoneMins,2);
  
- var dispDateTime = "현재 날짜/시간: "+yearNow+"년 "+monthNow+"월 "+dayNow+"일 ("+weekdayNames[weekdayNow]+"요일) "+dispHourNow+"시 "+dispMinsNow+"분 "+dispSecsNow+"초 (UTC"+timezoneHours+":"+timezoneMins+")";
+ var dispDateTime = `현재 날짜/시간: ${yearNow}년 ${monthNow}월 ${dayNow}일 (${weekdayNames[weekdayNow]}요일) ${padzero(dispHourNow,2)}:${padzero(dispMinsNow,2)}:${padzero(dispSecsNow,2)} (UTC${timezoneHours}:${timezoneMins})`;
  
  document.getElementById("date_now").innerHTML = dispDateTime;
 }
@@ -200,4 +200,4 @@ function displayWeekdayYearNow(){
 var cMessage = "오늘도 반짝반짝 두근두근!!";
 
 if((navigator.appName == "Netscape" && navigator.userAgent.search("Trident") != -1) || (navigator.userAgent.indexOf("msie") != -1)){console.log(cMessage);}
-else{console.log("%c "+cMessage,"color:#0000FF;font-weight:bold;");}
+else{console.log("%c "+cMessage,"color:#FF5522;font-weight:bold;");}
