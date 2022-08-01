@@ -132,27 +132,6 @@ border-collapse: collapse;
 
 ul,ol{margin-right: 1em;}
 
-#mainpage{
-display: block;
-margin-left: 1em;
-margin-right: 1em;
-margin-top: 1em;
-margin-bottom: 1em;
-}
-
-#main_01,#main_02{
-background-color: #F5F8FA;
-width: 39%;
-border-radius: 1.4em;
-margin: 0.5em auto;
-padding: 0.5em 0.5em;
-height: auto;
-}
-
-@media ( max-width: 720px ){
- #main_01,#main_02{width: 95%;}
-}
-
 .stopped{
 z-index: 5;
 position: absolute;
