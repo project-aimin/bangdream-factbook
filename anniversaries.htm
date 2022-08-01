@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>Girls' Band Factbook : BanG Dream! 프로젝트 관련 주요 생일/기념일 일람</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" type="text/css" href="./common/css/w3.css" />
+<link rel="stylesheet" type="text/css" href="./common/css/bangdream.css" />
+<link rel="stylesheet" type="text/css" href="./common/css/pageload.css" />
+<script type="text/javascript" src="./common/js/common.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./common/js/bangdream_anniversaries.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+ toggleFilterMode();
+ highlightToday();
+ dispDateNow();
+ displayWeekdayYearNow();
+ setInterval("dispDateNow();",200);
+ setInterval("highlightToday();",200);
+
+ var dateNow = new Date();
+ var hoursNow = dateNow.getHours();
+ var minsNow = dateNow.getMinutes();
+ var secsNow = dateNow.getSeconds();
+ 
+ if(hoursNow == 0 && minsNow == 0 && secsNow == 0){highlightToday();}
+});
+</script>
+<!-- 이 페이지는 최신버전의 모던 웹 브라우저(크롬, 엣지, 파이어폭스 등)에 최적화되어 있습니다. -->
+</head>
+<body class="page-background">
+
+<div class="w3-content">
+ <header class="w3-center w3-padding-large">
+  <h2 class="w3-xlarge" style="font-weight: bold;">BanG Dream! 프로젝트 관련 주요 생일/기념일 일람</h2>
+ </header>
+</div>
+
+<h6 id="date_now"></h6>
+
+<div id="container_filter" style="font-size: 1.2em;">
+
+ <div id="filter_series" style="padding-left: 1em;">
+  <input type="radio" name="filter_mode" id="filter_cboxes" checked="checked" onchange="toggleFilterMode();" />&nbsp;<label for="filter_cboxes">밴드 및 범주 선택:</label>
+  <br />
+  <span style="font-size: 0.875em;"><b>밴드:</b>&nbsp;</span>
+  <input type="checkbox" name="output_filter" id="display_pp" value="pp" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_pp" for="display_pp">Poppin'Party</label>&nbsp;
+  <input type="checkbox" name="output_filter" id="display_ag" value="ag" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_ag" for="display_ag">Afterglow</label>&nbsp;
+  <input type="checkbox" name="output_filter" id="display_pl" value="pl" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_pl" for="display_pl">Pastel*Palettes</label>&nbsp;
+  <input type="checkbox" name="output_filter" id="display_rs" value="rs" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_rs" for="display_rs">Roselia</label>&nbsp;
+  <input type="checkbox" name="output_filter" id="display_hh" value="hh" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_hh" for="display_hh">헬로, 해피 월드!</label>&nbsp;
+  <input type="checkbox" name="output_filter" id="display_mf" value="mf" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_mf" for="display_mf">Morfonica</label>&nbsp;
+  <input type="checkbox" name="output_filter" id="display_ra" value="ra" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_ra" for="display_ra">RAISE A SUILEN</label>&nbsp;
+  <input type="checkbox" name="output_filter" id="display_bd" value="bd" checked="checked" onchange="refreshFilter();" />&nbsp;<label for="display_bd">전 밴드/기타</label>
+ </div>
+ <div id="filter_types" style="padding-left: 1em;">
+  <span style="font-size: 0.875em;"><b>범주:</b>&nbsp;</span>
+  <input type="checkbox" name="output_filter" id="display_charas" value="chara" checked="checked" onchange="refreshFilter();" />&nbsp;<label for="display_charas">캐릭터(멤버) 생일</label>&nbsp;
+  <input type="checkbox" name="output_filter" id="display_voices" value="voices" checked="checked" onchange="refreshFilter();" />&nbsp;<label for="display_voices">성우 생일</label>&nbsp;
+  <input type="checkbox" name="output_filter" id="display_celebrations" value="anniv" checked="checked" onchange="refreshFilter();" />&nbsp;<label for="display_celebrations">각종 기념일</label>
+ </div>
+ <div id="filter_keyword" style="padding-left: 1em;">
+  <input type="radio" name="filter_mode" id="filter_keywords" onchange="toggleFilterMode();" />&nbsp;<label for="filter_keywords">키워드로 검색:</label>&nbsp;<input type="text" name="keyword_filter" id="keywords" size="22" maxlength="64" placeholder="(예: 카스미, 아이미)" style="font-size: 14px;" onchange="keywordFilter();" />
+  <sub>(찾고자 하는 캐릭터/인물 이름, 기타 키워드 등으로 검색할 수 있습니다)</sub>
+ </div>
+</div>
+
+<div id="view_month">[<a href="javascript:void(0);" onclick="moveToMonthNow();">이번달 일정 살펴보기</a>] [<a href="javascript:void(0);" onclick="moveToToday();">오늘의 생일/기념일</a>]</div>
+
+<div id="date_list">
+
+<h3 class="w3-large monthlyheader"><a id="scroll_month_1" name="month_1">1월</a></h3>
+
+<ul class="i_date" id="d_101" style="display: list-item;">
+ <li>1월 1일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="anniv_pp" style="display: list-item;"><b>기념일:</b> Poppin'Party 단독 극장판 (팝핀'드림!) 현지 개봉일 (2022년)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_102" style="display: list-item;">
+ <li>1월 2일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_rs" style="display: list-item;"><b>성우 생일:</b> 아케사카 사토미 ([初] 시로카네 린코 역, 1988년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_103" style="display: list-item;">
+ <li>1월 3일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 뱅드림! TVA 2기 현지 방영 시작일 (2019년)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_107" style="display: list-item;">
+ <li>1월 7일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_ag" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_tsugumi">하자와 츠구미</span> (<span class="t_ag">Afterglow</span>/Kb.)</li>
+  </ul>
+ </li>
+</ul> 
+
+<ul class="i_date" id="d_113" style="display: list-item;">
+ <li>1월 13일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_ra" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_layer_rei">레이어/와카나 레이</span> (<span class="t_ra">RAISE A SUILEN</span>/Ba. &amp; Vo.)</li>
+    <li class="voices_ag" style="display: list-item;"><b>성우 생일:</b> 미사와 사치카 (아오바 모카 역, 1993년생)</li>
+    <li class="voices_ra" style="display: list-item;"><b>성우 생일:</b> Raychell (레이어/와카나 레이 역, 1985년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_121" style="display: list-item;">
+ <li>1월 21일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 뱅드림! TVA 1기 현지 방영 시작일 (2017년)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_123" style="display: list-item;">
+ <li>1월 23일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 뱅드림! TVA 3기 현지 방영 시작일 (2020년)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_129" style="display: list-item;">
+ <li>1월 29일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_ag" style="display: list-item;"><b>성우 생일:</b> 사쿠라 아야네 (미타케 란 역, 1994년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 class="w3-large monthlyheader"><a id="scroll_month_2" name="month_2">2월</a></h3>
+
+<ul class="i_date" id="d_203" style="display: list-item;">
+ <li>2월 3일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_ra" style="display: list-item;"><b>성우 생일:</b> 코하라 리코 (록/아사히 롯카 역, 1990년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_206" style="display: list-item;">
+ <li>2월 6일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 걸즈 밴드 파티(걸파) 한국어판 런칭일 (2018년)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_208" style="display: list-item;">
+ <li>2월 8일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_rs" style="display: list-item;"><b>성우 생일:</b> 시자키 카논 ([現] 시로카네 린코 역, 생년 불명)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_219" style="display: list-item;">
+ <li>2월 19일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_mf" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_mashiro">쿠라타 마시로</span> (<span class="t_mf">Morfonica</span>/Vo.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_228" style="display: list-item;">
+ <li>2월 28일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_hh" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_kaoru">세타 카오루</span> (<span class="t_hh">헬로, 해피 월드!</span>/Gt.)</li>
+    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> <b>뱅드림! 프로젝트 발족일</b> (2015년)</li>
+  </ul>
+ </li>
+</ul>
+
+
+<h3 class="w3-large monthlyheader"><a id="scroll_month_3" name="month_3">3월</a></h3>
+
+
+<ul class="i_date" id="d_315" style="display: list-item;">
+ <li>3월 15일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_hh" style="display: list-item;"><b>성우 생일:</b> 토요타 모에 (마츠바라 카논 역, 1995년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_316" style="display: list-item;">
+ <li>3월 16일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 걸즈 밴드 파티(걸파) 런칭일 (일본판 기준, 2017년)</li>
+    <li class="voices_rs" style="display: list-item;"><b>성우 생일:</b> 쿠도 하루카 (히카와 사요 역, 1989년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_320" style="display: list-item;">
+ <li>3월 20일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_rs" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_sayo">히카와 사요</span> (<span class="t_rs">Roselia</span>/Gt.)</li>
+    <li class="chara_pl" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_hina">히카와 히나</span> (<span class="t_pl">Pastel*Palettes</span>/Gt.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_323" style="display: list-item;">
+ <li>3월 23일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_pp" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_rimi">우시고메 리미</span> (<span class="t_pp">Poppin'Party</span>/Ba.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_324" style="display: list-item;">
+ <li>3월 24일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="anniv_pp" style="display: list-item;"><b>기념일:</b> Poppin'Party 단독 극장판 (팝핀'드림!) 국내 개봉일 (2022년)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_325" style="display: list-item;">
+ <li>3월 25일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_ra" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_pareo_reona">파레오/뉴바라 레오나</span> (<span class="t_ra">RAISE A SUILEN</span>/Kb. &amp; Vo.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_331" style="display: list-item;">
+ <li>3월 31일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_mf" style="display: list-item;"><b>성우 생일:</b> 니시오 유카 (히로마치 나나미 역, 1994년생)</li>
+  </ul>
+ </li>
+</ul>
+
+
+<h3 class="w3-large monthlyheader"><a id="scroll_month_4" name="month_4">4월</a></h3>
+
+<ul class="i_date" id="d_406" style="display: list-item;">
+ <li>4월 6일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_pl" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_chisato">시라사기 치사토</span> (<span class="t_pl">Pastel*Palettes</span>/Ba.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_410" style="display: list-item;">
+ <li>4월 10일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_ag" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_ran">미타케 란</span> (<span class="t_ag">Afterglow</span>/Vo. &amp; Gt.)</li>
+    <li class="voices_hh" style="display: list-item;"><b>성우 생일:</b> 쿠로사와 토모요 (미셸/오쿠사와 미사키 역, 1996년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_415" style="display: list-item;">
+ <li>4월 15일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_ag" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_tomoe">우다가와 토모에</span> (<span class="t_ag">Afterglow</span>/Dr.)</li>
+  </ul>
+ </li>
+</ul> 
+
+<ul class="i_date" id="d_417" style="display: list-item;">
+ <li>4월 17일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_mf" style="display: list-item;"><b>성우 생일:</b> 스구타 히나 (키리가야 토우코 역, 1995년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_420" style="display: list-item;">
+ <li>4월 20일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_mf" style="display: list-item;"><b>성우 생일:</b> 신도 아마네 (쿠라타 마시로 역, 2004년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_423" style="display: list-item;">
+ <li>4월 23일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="anniv_rs" style="display: list-item;"><b>기념일:</b> Roselia 단독 극장판 1편 (&quot;약속&quot;) 현지 개봉일 (2021년)</li>
+  </ul>
+ </li>
+</ul>
+
+
+<h3 class="w3-large monthlyheader"><a id="scroll_month_5" name="month_5">5월</a></h3>
+
+<ul class="i_date" id="d_511" style="display: list-item;">
+ <li>5월 11일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_hh" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_kanon">마츠바라 카논</span> (<span class="t_hh">헬로, 해피 월드!</span>/Dr.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_512" style="display: list-item;">
+ <li>5월 12일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_ra" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_masking_masuki">마스킹/사토 마스키</span> (<span class="t_ra">RAISE A SUILEN</span>/Dr.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_519" style="display: list-item;">
+ <li>5월 19일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_pp" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_saaya">야마부키 사아야</span> (<span class="t_pp">Poppin'Party</span>/Dr.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_522" style="display: list-item;">
+ <li>5월 22일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_ra" style="display: list-item;"><b>성우 생일:</b> 쿠라치 레오 (파레오/뉴바라 레오나 역, 1997년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 class="w3-large monthlyheader"><a id="scroll_month_6" name="month_6">6월</a></h3>
+
+
+<ul class="i_date" id="d_603" style="display: list-item;">
+ <li>6월 3일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="anniv_rs" style="display: list-item;"><b>기념일:</b> Roselia 단독 극장판 1편 (&quot;약속&quot;) 국내 개봉일 (2021년)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_616" style="display: list-item;">
+ <li>6월 16일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_mf" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_nanami">히로마치 나나미</span> (<span class="t_mf">Morfonica</span>/Ba.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_618" style="display: list-item;">
+ <li>6월 18일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_pl" style="display: list-item;"><b>성우 생일:</b> 나카가미 이쿠미 (야마토 마야 역, 1997년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_624" style="display: list-item;">
+ <li>6월 24일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_rs" style="display: list-item;"><b>성우 생일:</b> 엔도 유리카 ([初] 이마이 리사 역, 1994년생)</li>
+    <li class="voices_mf" style="display: list-item;"><b>성우 생일:</b> mika (후타바 츠쿠시 역, 생년 불명)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_625" style="display: list-item;">
+ <li>6월 25일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="anniv_rs" style="display: list-item;"><b>기념일:</b> Roselia 단독 극장판 2편 (&quot;Song I am.&quot;) 현지 개봉일 (2021년)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_627" style="display: list-item;">
+ <li>6월 27일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_pl" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_eve">와카미야 이브</span> (<span class="t_pl">Pastel*Palettes</span>/Kb.)</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 class="w3-large monthlyheader"><a id="scroll_month_7" name="month_7">7월</a></h3>
+
+<ul class="i_date" id="d_703" style="display: list-item;">
+ <li>7월 3일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_rs" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_ako">우다가와 아코</span> (<span class="t_rs">Roselia</span>/Dr.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_705" style="display: list-item;">
+ <li>7월 5일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_ra" style="display: list-item;"><b>성우 생일:</b> 츠무기 리사 (츄츄/타마데 치유 역, 1996년생)</li>
+    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 걸파☆피코 애니메이션 1기 방영 시작일 (2018년)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_707" style="display: list-item;">
+ <li>7월 7일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 걸파☆피코 애니메이션 2기 방영 시작일 (2020년)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_714" style="display: list-item;">
+ <li>7월 14일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_pp" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_kasumi">토야마 카스미</span> (<span class="t_pp">Poppin'Party</span>/Gt. &amp; Vo.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_716" style="display: list-item;">
+ <li>7월 16일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_ag" style="display: list-item;"><b>성우 생일:</b> 히카사 요코 (우다가와 토모에 역, 1985년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_717" style="display: list-item;">
+ <li>7월 17일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_ra" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_lock_rokka">록/아사히 롯카</span> (<span class="t_ra">RAISE A SUILEN</span>/Gt.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_720" style="display: list-item;">
+ <li>7월 20일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_ra" style="display: list-item;"><b>성우 생일:</b> 나츠메 (마스킹/사토 마스키 역, 1986년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_728" style="display: list-item;">
+ <li>7월 28일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="anniv_mf" style="display: list-item;"><b>기념일:</b> Morfonica 단독 OVA (Morfonication) 최초 공개일 (2022년)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_730" style="display: list-item;">
+ <li>7월 30일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_hh" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_hagumi">키타자와 하구미</span> (<span class="t_hh">헬로, 해피 월드!</span>/Ba.)</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 class="w3-large monthlyheader"><a id="scroll_month_8" name="month_8">8월</a></h3>
+
+<ul class="i_date" id="d_808" style="display: list-item;">
+ <li>8월 8일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_hh" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_kokoro">츠루마키 코코로</span> (<span class="t_hh">헬로, 해피 월드!</span>/Vo.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_810" style="display: list-item;">
+ <li>8월 10일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_pl" style="display: list-item;"><b>성우 생일:</b> 오자와 아리 (히카와 히나 역, 1992년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_817" style="display: list-item;">
+ <li>8월 17일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_pp" style="display: list-item;"><b>성우 생일:</b> 이토 아야사 (이치가야 아리사 역, 1996년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_818" style="display: list-item;">
+ <li>8월 18일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_hh" style="display: list-item;"><b>성우 생일:</b> 요시다 유리 (키타자와 하구미 역, 1992년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_820" style="display: list-item;">
+ <li>8월 20일 <span class="i_weekday"></span>
+  <ul class="i_list">
+   <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 극장판 필름 라이브 2기 현지 개봉일 (2021년)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_825" style="display: list-item;">
+ <li>8월 25일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_rs" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_lisa">이마이 리사</span> (<span class="t_rs">Roselia</span>/Ba.)</li>
+  </ul>
+ </li>
+</ul>
+
+
+<h3 class="w3-large monthlyheader"><a id="scroll_month_9" name="month_9">9월</a></h3>
+
+<ul class="i_date" id="d_903" style="display: list-item;">
+ <li>9월 3일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_ag" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_moca">아오바 모카</span> (<span class="t_ag">Afterglow</span>/Gt.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_909" style="display: list-item;">
+ <li>9월 9일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="anniv_rs" style="display: list-item;"><b>기념일:</b> Roselia 단독 극장판 2편 (&quot;Song I am.&quot;) 국내 개봉일 (2021년)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_912" style="display: list-item;">
+ <li>9월 12일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_rs" style="display: list-item;"><b>성우 생일:</b> 나카시마 유키 ([現] 이마이 리사 역, 1997년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_913" style="display: list-item;">
+ <li>9월 13일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_pp" style="display: list-item;"><b>성우 생일:</b> 오오하시 아야카 (야마부키 사아야 역, 1994년생)</li>
+    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 극장판 필름 라이브 1기 현지 개봉일 (2019년)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_914" style="display: list-item;">
+ <li>9월 14일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_pl" style="display: list-item;"><b>성우 생일:</b> 하타 사와코 (와카미야 이브 역, 1988년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_915" style="display: list-item;">
+ <li>9월 15일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_mf" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_tsukushi">후타바 츠쿠시</span> (<span class="t_mf">Morfonica</span>/Dr.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_916" style="display: list-item;">
+ <li>9월 16일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 걸즈 밴드 파티(걸파) 닌텐도 스위치판 발매일 (현지 기준, 2021년)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_926" style="display: list-item;">
+ <li>9월 26일 <span class="i_weekday"></span>
+  <ul class="i_list">
+   <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 극장판 필름 라이브 1기 국내 개봉일 (2019년)</li>
+  </ul>
+ </li>
+</ul>
+
+<h3 class="w3-large monthlyheader"><a id="scroll_month_10" name="month_10">10월</a></h3>
+
+<ul class="i_date" id="d_1001" style="display: list-item;">
+ <li>10월 1일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_hh" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_michelle">미셸</span>/<span class="c_chara_misaki">오쿠사와 미사키</span> (<span class="t_hh">헬로, 해피 월드!</span>/DJ)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1007" style="display: list-item;">
+ <li>10월 7일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 걸파☆피코 애니메이션 3기 방영 시작일 (2021년)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1010" style="display: list-item;">
+ <li>10월 10일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_pp" style="display: list-item;"><b>성우 생일:</b> 오오츠카 사에 (하나조노 타에 역, 1994년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1012" style="display: list-item;">
+ <li>10월 12일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_hh" style="display: list-item;"><b>성우 생일:</b> 이토 미쿠 (츠루마키 코코로 역, 1996년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1017" style="display: list-item;">
+ <li>10월 17일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_rs" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_rinko">시로카네 린코</span> (<span class="t_rs">Roselia</span>/Kb.)</li>
+    <li class="voices_rs" style="display: list-item;"><b>성우 생일:</b> 아이바 아이나 (미나토 유키나 역, 1988년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1019" style="display: list-item;">
+ <li>10월 19일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_mf" style="display: list-item;"><b>성우 생일:</b> Ayasa (야시오 루이 역, 1991년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1023" style="display: list-item;">
+ <li>10월 23일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_ag" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_himari">우에하라 히마리</span> (<span class="t_ag">Afterglow</span>/Ba.)</li>
+  </ul>
+ </li>
+</ul> 
+
+<ul class="i_date" id="d_1024" style="display: list-item;">
+ <li>10월 24일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_rs" style="display: list-item;"><b>성우 생일:</b> 사쿠라가와 메구 (우다가와 아코 역, 1988년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1025" style="display: list-item;">
+ <li>10월 25일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_pp" style="display: list-item;"><b>성우 생일:</b> 니시모토 리미 (우시고메 리미 역, 1994년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1026" style="display: list-item;">
+ <li>10월 26일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_rs" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_yukina">미나토 유키나</span> (<span class="t_rs">Roselia</span>/Vo.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1027" style="display: list-item;">
+ <li>10월 27일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_pp" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_arisa">이치가야 아리사</span> (<span class="t_pp">Poppin'Party</span>/Kb.)</li>
+  </ul>
+ </li>
+</ul>
+
+
+<h3 class="w3-large monthlyheader"><a id="scroll_month_11" name="month_11">11월</a></h3>
+
+<ul class="i_date" id="d_1103" style="display: list-item;">
+ <li>11월 3일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_pl" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_maya">야마토 마야</span> (<span class="t_pl">Pastel*Palettes</span>/Dr.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1110" style="display: list-item;">
+ <li>11월 10일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_hh" style="display: list-item;"><b>성우 생일:</b> 타도코로 아즈사 (세타 카오루 역, 1993년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1118" style="display: list-item;">
+ <li>11월 18일 <span class="i_weekday"></span>
+  <ul class="i_list">
+   <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 극장판 필름 라이브 2기 국내 개봉일 (2021년)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1119" style="display: list-item;">
+ <li>11월 19일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_mf" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_rui">야시오 루이</span> (<span class="t_mf">Morfonica</span>/Vn.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1122" style="display: list-item;">
+ <li>11월 22일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_pl" style="display: list-item;"><b>성우 생일:</b> 마에시마 아미 (마루야마 아야 역, 1997년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1126" style="display: list-item;">
+ <li>11월 26일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_ag" style="display: list-item;"><b>성우 생일:</b> 카토 에미리 (우에하라 히마리 역, 1983년생)</li>
+  </ul>
+ </li>
+</ul>
+
+
+<h3 class="w3-large monthlyheader"><a id="scroll_month_12" name="month_12">12월</a></h3>
+
+<ul class="i_date" id="d_1204" style="display: list-item;">
+ <li>12월 4일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_pp" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_tae">하나조노 타에</span> (<span class="t_pp">Poppin'Party</span>/Gt.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1207" style="display: list-item;">
+ <li>12월 7일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_ra" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_chuchu_chiyu">츄츄/타마데 치유</span> (<span class="t_ra">RAISE A SUILEN</span>/DJ)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1216" style="display: list-item;">
+ <li>12월 16일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_mf" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_touko">키리가야 토우코</span> (<span class="t_mf">Morfonica</span>/Gt.)</li>
+    <li class="voices_ag" style="display: list-item;"><b>성우 생일:</b> 카네모토 히사코 (하자와 츠구미 역, 1987년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1219" style="display: list-item;">
+ <li>12월 19일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_pl" style="display: list-item;"><b>성우 생일:</b> 우에사카 스미레 (시라사기 치사토 역, 1991년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1225" style="display: list-item;">
+ <li>12월 25일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="voices_pp" style="display: list-item;"><b>성우 생일:</b> <abbr title="본명: 테라카와 아이미">아이미</abbr> (토야마 카스미 역, 1991년생)</li>
+    <li class="voices_bd" style="display: list-item;"><b>성우 생일:</b> 스자키 아야 (츠키시마 마리나 역, 1986년생)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1227" style="display: list-item;">
+ <li>12월 27일 <span class="i_weekday"></span>
+  <ul class="i_list">
+    <li class="chara_pl" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_aya">마루야마 아야</span> (<span class="t_pl">Pastel*Palettes</span>/Vo.)</li>
+  </ul>
+ </li>
+</ul>
+
+
+</div>
+
+<div id="page_disclaimer" style="text-align: center; padding: 1em; margin: auto;">
+ <b>면책 조항</b>: 이 페이지는 <a href="https://bushiroad.co.jp/en">부시로드</a> 및 <a href="https://www.craftegg.co.jp/">Craft Egg</a>, <a href="https://www.kakaogamescorp.com/">카카오게임즈</a> 등과 <b>직접적 연관이 없으며, 작성자는 이 페이지를 통해 그 어떠한 금전적 이득도 취하고 있지 않습니다.</b><br />
+ &quot;BanG Dream!&quot;, &quot;뱅드림!&quot; 및 관련 상표/공식 컨텐츠는 대한민국 및 일본, 그 외 국가에서 부시로드의 재산입니다.
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans+KR&family=IBM+Plex+Sans+KR&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css');
+
+/* 전반적 페이지 스타일 */
+
+body,h1,h2,h3,h4,h5,h6{
+font-family: 'IBM Plex Sans KR', "Noto Sans KR", "Noto Sans JP", "Nanum Gothic", "Malgun Gothic", sans-serif !important;
+font-size: 0.95em;
+line-height: 180% !important;
+}
+
+.page-background{
+background: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(../assets/page-bg.png) no-repeat;
+background-attachment: fixed;
+background-size: cover;
+background-position: center top;
+color: #FFFFFF;
+}
+
+pre{
+white-space: pre-wrap;
+white-space: -moz-pre-wrap;
+white-space: -pre-wrap;
+white-space: -o-pre-wrap;
+word-wrap: break-word;
+}
+
+#notice_i,#notice_p{
+text-align: center;
+font-size: 1em;
+}
+
+
+.pagelist{
+background-color: rgba(0,0,0,0.65);
+border-radius: 1em;
+width: 30vw;
+margin: 0.5em auto;
+padding: 0.5em 0.5em;
+height: auto;
+}
+
+.pageentries{font-weight: bold;}
+
+.monthlyheader{
+padding-left: 0.5em;
+background-color: #F8F8FA;
+color: rgba(0,0,0,0.95) !important;
+}
+
+
+label{font-size: 0.9em;}
+
+sub,sup{line-height: normal !important;}
+
+#scrollbutton{
+bottom: 0;
+right: 0;
+width: 3.3em;
+height: 2em;
+line-height: 2em;
+font-size: 140%;
+text-align: center;
+background-color: #E8E8FF;
+border: 2px solid #5F5F5F;
+border-radius: 0.25em 0em 0em 0em;
+position: fixed;
+opacity: 0.72;
+}
+
+span{
+color: rgba(255,255,255,1);
+text-decoration: none;
+}
+
+a:link{
+color: rgba(255,51,119,1);
+text-decoration: none;
+}
+a:active{
+color: rgba(255,51,119,0.75);
+text-decoration: none;
+}
+a:visited{
+color: rgba(255,51,119,1);
+text-decoration: none;
+}
+a:hover{
+color: rgba(255,136,187,0.75);
+text-decoration: none;
+}
+
+label{cursor: pointer;}
+
+input{
+font-family: Tahoma;
+}
+
+input[type="number"]{width: 55px;}
+
+input.inNum{
+height: 2em;
+width: 7em;
+font-size: 13px;
+}
+
+input.generalBtns{
+background-color: #FFFFFF;
+cursor: pointer;
+font-family: NanumGothic;
+border: 1px solid #0000FF;
+border-radius: 3px;
+}
+
+input.calcBtns{
+margin-top: 1em;
+margin-bottom: 1em;
+padding : 1.4em 8em;
+font-size : 1.1em;
+}
+
+abbr{cursor: help;}
+
+table,tr,td,th{
+border: 1px solid #000000;
+border-collapse: collapse;
+}
+
+ul,ol{margin-right: 1em;}
+
+#mainpage{
+display: block;
+margin-left: 1em;
+margin-right: 1em;
+margin-top: 1em;
+margin-bottom: 1em;
+}
+
+#main_01,#main_02{
+background-color: #F5F8FA;
+width: 39%;
+border-radius: 1.4em;
+margin: 0.5em auto;
+padding: 0.5em 0.5em;
+height: auto;
+}
+
+@media ( max-width: 720px ){
+ #main_01,#main_02{width: 95%;}
+}
+
+.stopped{
+z-index: 5;
+position: absolute;
+width: 100%;
+height: 100%;
+background-color: rgba(255,255,255,0.5);
+}
+
+.pageindex{
+margin: auto;
+width: 20em;
+border: 1px solid #C0B1A2;
+background-color: #FFFFFF;
+}
+
+ul.sectionlist{
+list-style-type: none;
+margin: 0;
+padding: 0;
+overflow: hidden;
+background-color: inherit;
+border: 1px solid #000000;
+}
+
+li.sectionlist{
+display: block;
+color: #000000;
+text-align: center;
+padding: 0.5em 1em;
+text-decoration: none;
+border-bottom: 1px solid #000000;
+}
+
+li.sectionlist:last-child{border-bottom: none;}
+
+.sectionheading{
+font-weight: bold;
+margin-top: 2.5em;
+margin-left: 0.5rem;
+}
+
+.seriesheading{
+font-weight: bold;
+margin-top: 1.25em;
+margin-left: 0.5rem;
+}
+
+.website_about{margin: 0.25rem 0.5rem;}
+
+.cancelled{text-decoration: line-through;}
+.cancelreason{font-style: italic;}
+
+.otherevents{
+font-weight: bold;
+list-style-type: none;
+}
+
+/* 밴드 및 멤버별 이미지 컬러 */
+#s_pp{background-color:#FF3377;}
+#s_pp a{color: #FFFFFF !important;}
+.t_pp{color: #FF3377;}
+
+.c_chara_kasumi{color: #FF5522;}
+.c_chara_saaya{color: #FFCC11;}
+.c_chara_tae{color: #0077DD;}
+.c_chara_arisa{color: #AA66DD;}
+.c_chara_rimi{color: #FF55BB;}
+
+#s_ag{background-color:#E53344;}
+#s_ag a{color: #FFFFFF !important;}
+.t_ag{color: #E53344;}
+
+.c_chara_ran{color: #EE0022;}
+.c_chara_moca{color: #00CCAA;}
+.c_chara_himari{color: #FF9999;}
+.c_chara_tomoe{color: #BB0033;}
+.c_chara_tsugumi{color: #FFEE88;}
+
+#s_pl{background-color:#33DDAA;}
+#s_pl a{color: #FFFFFF !important;}
+.t_pl{color: #33DDAA;}
+
+.c_chara_aya{color: #FF88BB;}
+.c_chara_hina{color: #55DDEE;}
+.c_chara_chisato{color: #FFEEAA;}
+.c_chara_maya{color: #99DD88;}
+.c_chara_eve{color: #DDBBFF;}
+
+#s_rs{background-color: #3344AA;}
+#s_rs a{color: #FFFFFF !important;}
+.t_rs{color: #3344AA;}
+
+.c_chara_yukina{color: #881188;}
+.c_chara_sayo{color: #00AABB;}
+.c_chara_lisa{color: #DD2200;}
+.c_chara_ako{color: #DD0088;}
+.c_chara_rinko{color: #BBBBBB;}
+
+#s_hh{background-color: #FFDD00;}
+#s_hh a{color: #000000 !important;}
+.t_hh{color: #FFDD00;}
+
+.c_chara_kokoro{color: #FFEE22;}
+.c_chara_kaoru{color: #AA33CC;}
+.c_chara_hagumi{color: #FF9922;}
+.c_chara_kanon{color: #44DDFF;}
+.c_chara_misaki{color: #006699;}
+.c_chara_michelle{color: #DD33CC;}
+
+
+#s_mf{background-color:#33AAFF;}
+#s_mf a{color: #FFFFFF !important;}
+.t_mf{color: #33AAFF;}
+
+.c_chara_mashiro{color: #6677CC;}
+.c_chara_touko{color: #EE6666;}
+.c_chara_nanami{color: #EE7744;}
+.c_chara_tsukushi{color: #EE7788;}
+.c_chara_rui{color: #669988;}
+
+
+#s_ra{background-color:#22CCCC;}
+#s_ra a{color: #FFFFFF !important;}
+.t_ra{color: #22CCCC;}
+
+.c_chara_layer_rei{color: #CC0000;}
+.c_chara_lock_rokka{color: #AAEE22;}
+.c_chara_masking_masuki{color: #EEBB44;}
+.c_chara_pareo_reona{color: #FF99BB;}
+.c_chara_chuchu_chiyu{color: #00BBFF;}
+
+
+
+
+#date_list,#container_filter,.blockcontainer{
+padding: 0.5em;
+margin: auto;
+border: 1px solid #aaaaaa;
+}
+
+#view_month,#date_now{
+text-align: center;
+padding: 0.5em;
+margin: auto;
+}
+
+.listdesc{list-style-type: none;}
+
+.indexhead{text-align: center;}
+
+.idollinks{
+margin-top: -0.5em;
+display: none;
+}
+
+.scriptlinks{cursor: pointer;}
+
+.idolnames,.cgevent_lists,.cgelection_lists{font-size: 1em;}
+
+
+
+.nonavail{
+opacity: 0.5;
+filter: Alpha(opacity=50);
+}
+
+.tblsection{
+font-size: 1.25em;
+padding: 0.25em 0;
+}
+
+.notyetavail{color: #DEDEDE;}
+
+.link_idolinfo{color: inherit !important;}
+
+
+/* 텍스트 애니메이션 효과 */
+@keyframes fadeInOut{
+ 0% {opacity: 1;}
+ 50% {opacity: 0;}
+ 100% {opacity: 1;}
+}
+@-o-keyframes fadeInOut{
+ 0% {opacity: 1;}
+ 50% {opacity: 0;}
+ 100% {opacity: 1;}
+}
+@-moz-keyframes fadeInOut{
+ 0% {opacity: 1;}
+ 50% {opacity: 0;}
+ 100% {opacity: 1;}
+}
+@-webkit-keyframes fadeInOut{
+ 0% {opacity: 1;}
+ 50% {opacity: 0;}
+ 100% {opacity: 1;}
+}
+
+#nearend_event,#nearend_event_k{
+ -webkit-animation: fadeInOut 2s infinite;
+ -moz-animation: fadeInOut 2s infinite;
+ -o-animation: fadeInOut 2s infinite;
+ animation: fadeInOut 2s infinite;
+}
+
+#cgidols_numbers_765876,#cgidols_numbers_346{
+ width: 17em;
+ margin: auto;
+ resize: none;
+}
+
+.cg_partialvoice{color: #CCCCCC;}
+
+.cgelection_idols{
+width: 100%;
+overflow: auto;
+}
+
+#birthday_today,#birthday_nearest{
+text-align: center;
+justify-content: center;
+background-color: #F5F8FA;
+background-image: url('/assets/birthday_icon_trans.png');
+background-repeat: no-repeat;
+background-size: 87px;
+background-position: right bottom;
+font-size: 1em;
+width: 22.25em;
+margin-top: 1em;
+margin-left: auto;
+margin-right: auto;
+padding-top: 0.5em;
+padding-bottom: 1.5em;
+padding-left: 0.375em;
+padding-right: 0.375em;
+border-radius: 1.4em;
+}
+
+
+#event_countdown,#event_countdown_k{
+display: table-cell;
+vertical-align: middle;
+height: 240px;
+}
+
+#countdown_time,#event_progress,#nearend_event,#underday_event,#countdown_time_k,#event_progress_k,#nearend_event_k,#underday_event_k{line-height: 144% !important;}
+
+#nearest_by_series{
+font-size: 1em;
+margin: 0 auto 0 auto;
+}
+
+#today_birth{text-align: center;}
+
+#page_disclaimer{padding-right: 1.5em;}
+
+#date_now{
+text-align: center;
+font-size: 14px;
+text-decoration: underline;
+padding-top: 1em;
+padding-bottom: 1em;
+}
+
+#current_browser{font-size: 11px;}
+
+#headtext{
+text-align: center;
+background-color: #F5F8FA;
+padding-top: 1em;
+padding-bottom: 1em;
+border-radius: 1.4em;
+}
+
+#author_info,#recent_edit{
+text-align: right;
+padding-left: 0.5em;
+padding-right: 0.5em;
+font-size: 90%;
+}
+
+#author_footer{
+text-align: center;
+padding: 1em;
+font-size: 0.875em;
+}
