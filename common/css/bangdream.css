@@ -46,7 +46,7 @@ height: auto;
 
 .pageentries{font-weight: bold;}
 
-.monthlyheader{
+.monthlyheader,.yearlyheader{
 padding-left: 0.5em;
 background-color: #F8F8FA;
 color: rgba(0,0,0,0.95) !important;
@@ -190,6 +190,7 @@ list-style-type: none;
 }
 
 /* 밴드 및 멤버별 이미지 컬러 */
+/* Poppin'Party */
 #s_pp{background-color:#FF3377;}
 #s_pp a{color: #FFFFFF !important;}
 .t_pp{color: #FF3377;}
@@ -200,6 +201,7 @@ list-style-type: none;
 .c_chara_arisa{color: #AA66DD;}
 .c_chara_rimi{color: #FF55BB;}
 
+/* Afterglow */
 #s_ag{background-color:#E53344;}
 #s_ag a{color: #FFFFFF !important;}
 .t_ag{color: #E53344;}
@@ -210,6 +212,7 @@ list-style-type: none;
 .c_chara_tomoe{color: #BB0033;}
 .c_chara_tsugumi{color: #FFEE88;}
 
+/* Pastel*Palettes */
 #s_pl{background-color:#33DDAA;}
 #s_pl a{color: #FFFFFF !important;}
 .t_pl{color: #33DDAA;}
@@ -220,6 +223,7 @@ list-style-type: none;
 .c_chara_maya{color: #99DD88;}
 .c_chara_eve{color: #DDBBFF;}
 
+/* Roselia */
 #s_rs{background-color: #3344AA;}
 #s_rs a{color: #FFFFFF !important;}
 .t_rs{color: #3344AA;}
@@ -230,6 +234,7 @@ list-style-type: none;
 .c_chara_ako{color: #DD0088;}
 .c_chara_rinko{color: #BBBBBB;}
 
+/* 헬로, 해피 월드! (Hello, Happy World!) */
 #s_hh{background-color: #FFDD00;}
 #s_hh a{color: #000000 !important;}
 .t_hh{color: #FFDD00;}
@@ -241,7 +246,7 @@ list-style-type: none;
 .c_chara_misaki{color: #006699;}
 .c_chara_michelle{color: #DD33CC;}
 
-
+/* Morfonica */
 #s_mf{background-color:#33AAFF;}
 #s_mf a{color: #FFFFFF !important;}
 .t_mf{color: #33AAFF;}
@@ -252,7 +257,7 @@ list-style-type: none;
 .c_chara_tsukushi{color: #EE7788;}
 .c_chara_rui{color: #669988;}
 
-
+/* RAISE A SUILEN */
 #s_ra{background-color:#22CCCC;}
 #s_ra a{color: #FFFFFF !important;}
 .t_ra{color: #22CCCC;}
