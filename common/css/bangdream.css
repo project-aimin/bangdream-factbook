@@ -271,7 +271,7 @@ list-style-type: none;
 
 
 
-#date_list,#container_filter,.blockcontainer{
+#date_list,#overall_lists,#container_filter,.blockcontainer{
 padding: 0.5em;
 margin: auto;
 border: 1px solid #aaaaaa;
