@@ -34,14 +34,22 @@ font-size: 1em;
 .pagelist{
 background-color: rgba(0,0,0,0.65);
 border-radius: 1em;
-width: 30vw;
+width: 40vw;
 margin: 0.5em auto;
 padding: 0.5em 0;
 height: auto;
 }
 
-@media ( max-width: 768px ){
- .pagelist{width: 95vw;}
+.pagelist li{
+margin-left: -0.5em;
+}
+
+@media ( max-width: 1280px ){
+ .pagelist{width: 70vw;}
+}
+
+@media ( max-width: 720px ){
+ .pagelist{width: 90vw;}
 }
 
 .pageentries{font-weight: bold;}
