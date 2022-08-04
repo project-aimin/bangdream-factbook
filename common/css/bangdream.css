@@ -45,6 +45,10 @@ margin-left: -0.5em;
 }
 
 @media ( max-width: 1280px ){
+ .pagelist{width: 50vw;}
+}
+
+@media ( max-width: 1024px ){
  .pagelist{width: 70vw;}
 }
 
