@@ -198,6 +198,4 @@ function displayWeekdayYearNow(){
 }
 
 var cMessage = "오늘도 반짝반짝 두근두근!!";
-
-if((navigator.appName == "Netscape" && navigator.userAgent.search("Trident") != -1) || (navigator.userAgent.indexOf("msie") != -1)){console.log(cMessage);}
-else{console.log("%c "+cMessage,"color:#FF5522;font-weight:bold;");}
+console.log("%c "+cMessage,"color:#FF5522;font-weight:bold;");
