@@ -435,3 +435,30 @@ text-align: center;
 padding: 1em;
 font-size: 0.875em;
 }
+
+#layer_today{
+display: none;
+position: fixed;
+right: 0;
+top: 0;
+width: 100%;
+height: 100%;
+z-index: 1;
+background-color: rgba(0,0,0,0.5);
+}
+
+#anniversaries_today{
+display: none;
+text-align: center;
+position: absolute;
+background-color: rgba(0,0,0,0.75) !important;
+width: 28em;
+top: 30%;
+left: 50%;
+border-radius: 1em;
+margin-top: auto;
+margin-left: -14em;
+padding: 1em;
+height: auto;
+z-index: 2;
+}
