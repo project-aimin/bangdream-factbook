@@ -462,3 +462,6 @@ padding: 1em;
 height: auto;
 z-index: 2;
 }
+
+
+.date_today{background-color: rgba(0,0,34,0.75);}
