@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <title>오류</title>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="preconnect" href="https://fonts.googleapis.com" />
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans+KR&family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet" />
+   <style type="text/css">
+   /* 전반적 페이지 스타일 */
+   *{text-align: center;}
+
+   body,h1,h2,h3,h4,h5,h6{
+    font-family: 'IBM Plex Sans KR', "Noto Sans KR", "Noto Sans JP", "Nanum Gothic", "Malgun Gothic", sans-serif !important;
+    font-size: 0.95em;
+    line-height: 180% !important;
+   }
+   #headtext{font-size: 1.5em !important;}
+   #marina_oops{
+    width: auto;
+    height: 20vh;
+   }
+
+   #container{
+    width: 1080px;
+    max-width: 100%;
+    margin: auto;
+   }
+   </style>
+ </head>
+ <body id="mainbody">
+ <h1 id="headtext">페이지 오류 :: ERROR</h1>
+ <img src="https://cdn.yukinaserver.net/manual-uploads/marina.jpg" id="marina_oops" alt="Tsukishima Marina at Error" title="Marina" />
+ <div id="container">
+  <h1>앗!! 페이지를 불러오던 중 오류가 발생했습니다.<br />이 오류는 대개 해당 페이지가 처음부터 없거나 이름이 바뀌었거나, 혹은 삭제되었거나 접근할 수 없을 때 발생합니다. 또는 서버에 오류가 있는 것일 수도 있습니다.<br />우선 주소를 올바르게 입력했는지 확인해주시고, 만일 주소가 올바른데도 오류가 지속될 경우 서버 관리자(페이지 하단 연락처)로 문의하세요.</h1>
+  <noscript>자바스크립트(JS)를 켜시면 보다 자세한 오류 내용을 확인할 수 있습니다.</noscript>
+  <h3 id="error_content"></h3>
+  <script>
+   var statcodes = {200 : "OK", 400 : "Bad Request", 401 : "Unauthorized", 402 : "Payment Required", 403 : "Forbidden", 404 : "Not Found", 405 : "Method Not Allowed", 406 : "Not Acceptable", 407 : "Proxy Authentication Required", 408 : "Request Timeout", 409 : "Conflict", 410 : "Gone", 411 : "Length Required", 412 : "Precondition Failed", 413 : "Payload Too Large", 414 : "Request-URI Too Long", 415 : "Unsupported Media Type", 416 : "Request Range Not Satisfiable", 417 : "Expectation Failed", 418 : "I'm a teapot", 420 : "Enhance Your Calm", 421 : "Misdirected Request", 422 : "Unprocessable Entity", 423 : "Locked", 424 : "Failed Dependency", 425 : "Too Early", 426 : "Upgrade Required", 429 : "Too Many Requests", 431 : "Request Header Fields Too Large", 444 : "No Response", 451 : "Unavailable For Legal Reasons", 500 : "Internal Server Error", 501 : "Not Implemented", 502 : "Bad Gateway", 503 : "Service Unavailable", 504 : "Gateway Timeout"};
+   var r = new XMLHttpRequest();
+   r.open("GET",window.location.href,true);
+   r.onreadystatechange = function(){
+    if(r.readyState == 4){document.getElementById("error_content").innerHTML = `(오류 정보 : ${r.status} ${statcodes[r.status]})`;}
+   }
+   r.send();
+  </script>
+  <h3><a href="/">메인 페이지 바로가기</a></h3>
+  <h4>(문의 : <a href="https://open.kakao.com/me/Yuzuriha_Rina">카카오톡</a> / <a href="mailto:themunyang21@naver.com">메일</a>)</h4>
+ </div>
+ </body>
+</html>
