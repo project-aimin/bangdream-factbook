@@ -186,6 +186,7 @@ function moveToToday(){
 
 function displayWeekdayYearNow(){
  var y = (new Date()).getFullYear();
+ document.getElementById("year_now").innerHTML = `${y}년`;
 
  for(c=1;c<=1231;c++){
   if(document.getElementById("d_"+c) != null){
