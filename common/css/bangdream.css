@@ -285,8 +285,11 @@ list-style-type: none;
 #s_mg a{color: #FFFFFF !important;}
 .t_mg{color: #0088BB;}
 
-
-
+.c_chara_tomori{color: #77BBDD;}
+.c_chara_anon{color: #FFAABB;}
+.c_chara_rana{color: #00BBAA;}
+.c_chara_soyo{color: #FFDD88;}
+.c_chara_taki{color: #AA77BB;}
 
 #date_list,#overall_lists,#container_filter,.blockcontainer{
 padding: 0.5em;
