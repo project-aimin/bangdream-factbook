@@ -58,14 +58,15 @@ $(document).ready(function(){
   <input type="radio" name="filter_mode" id="filter_cboxes" checked="checked" onchange="toggleFilterMode();" />&nbsp;<label for="filter_cboxes">밴드 및 범주 선택:</label>
   <br />
   <span style="font-size: 0.875em;"><b>밴드:</b>&nbsp;</span>
-  <input type="checkbox" name="output_filter" id="display_pp" value="pp" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_pp" for="display_pp">Poppin'Party</label>&nbsp;
-  <input type="checkbox" name="output_filter" id="display_ag" value="ag" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_ag" for="display_ag">Afterglow</label>&nbsp;
-  <input type="checkbox" name="output_filter" id="display_pl" value="pl" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_pl" for="display_pl">Pastel*Palettes</label>&nbsp;
-  <input type="checkbox" name="output_filter" id="display_rs" value="rs" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_rs" for="display_rs">Roselia</label>&nbsp;
-  <input type="checkbox" name="output_filter" id="display_hh" value="hh" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_hh" for="display_hh">헬로, 해피 월드!</label>&nbsp;
-  <input type="checkbox" name="output_filter" id="display_mf" value="mf" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_mf" for="display_mf">Morfonica</label>&nbsp;
-  <input type="checkbox" name="output_filter" id="display_ra" value="ra" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_ra" for="display_ra">RAISE A SUILEN</label>&nbsp;
-  <input type="checkbox" name="output_filter" id="display_mg" value="mg" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_mg" for="display_mg">MyGO!!!!!</label>&nbsp;
+  <input type="checkbox" name="output_filter" id="display_pp" value="pp" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_pp" for="display_pp">&#x1F31F;Poppin'Party</label>&nbsp;
+  <input type="checkbox" name="output_filter" id="display_ag" value="ag" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_ag" for="display_ag">&#x26A1;Afterglow</label>&nbsp;
+  <input type="checkbox" name="output_filter" id="display_pl" value="pl" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_pl" for="display_pl">&#x1F338;Pastel*Palettes</label>&nbsp;
+  <input type="checkbox" name="output_filter" id="display_rs" value="rs" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_rs" for="display_rs">&#x1F339;Roselia</label>&nbsp;
+  <input type="checkbox" name="output_filter" id="display_hh" value="hh" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_hh" for="display_hh">&#x1F3AA;헬로, 해피 월드!</label>&nbsp;
+  <input type="checkbox" name="output_filter" id="display_mf" value="mf" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_mf" for="display_mf">&#x1F98B;Morfonica</label>&nbsp;
+  <input type="checkbox" name="output_filter" id="display_ra" value="ra" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_ra" for="display_ra">&#x1F3A7;RAISE A SUILEN</label>&nbsp;
+  <input type="checkbox" name="output_filter" id="display_mg" value="mg" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_mg" for="display_mg">&#x1F9ED;MyGO!!!!!</label>&nbsp;
+  <input type="checkbox" name="output_filter" id="display_am" value="am" checked="checked" onchange="refreshFilter();" />&nbsp;<label class="t_am" for="display_am">&#x1F319;Ave Mujica</label>&nbsp;
   <input type="checkbox" name="output_filter" id="display_bd" value="bd" checked="checked" onchange="refreshFilter();" />&nbsp;<label for="display_bd">전 밴드</label>
   <input type="checkbox" name="output_filter" id="display_etc" value="etc" checked="checked" onchange="refreshFilter();" />&nbsp;<label for="display_etc">기타</label>
  </div>
@@ -200,6 +201,14 @@ $(document).ready(function(){
  <li>2월 8일 <span class="i_weekday"></span>
   <ul class="i_list">
     <li class="voices_rs" style="display: list-item;"><b>성우 생일:</b> 시자키 카논 (現 <span class="c_chara_rinko">시로카네 린코</span> 역, 생년 불명)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_218" style="display: list-item;">
+ <li>2월 18일 <span class="i_weekday"></span>
+  <ul class="i_list">
+   <li class="voices_am" style="display: list-item;"><b>성우 생일:</b> 와타베 유즈키 (<span class="c_chara_mortis_mutsumi">와카바 무츠미/모르티스</span> 역, 2003년생)</li>
   </ul>
  </li>
 </ul>
@@ -405,7 +414,8 @@ $(document).ready(function(){
 <ul class="i_date" id="d_519" style="display: list-item;">
  <li>5월 19일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="chara_pp" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_saaya">야마부키 사아야</span> (<span class="t_pp">Poppin'Party</span>/Dr.)</li>
+   <li class="chara_pp" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_saaya">야마부키 사아야</span> (<span class="t_pp">Poppin'Party</span>/Dr.)</li>
+   <li class="voices_am" style="display: list-item;"><b>성우 생일:</b> 오카다 메이 (<span class="c_chara_timoris_umiri">야하타 우미리/티모리스</span> 역, 1996년생)</li>
   </ul>
  </li>
 </ul>
@@ -662,6 +672,14 @@ $(document).ready(function(){
  </li>
 </ul>
 
+<ul class="i_date" id="d_910" style="display: list-item;">
+ <li>9월 10일 <span class="i_weekday"></span>
+  <ul class="i_list">
+   <li class="voices_am" style="display: list-item;"><b>성우 생일:</b> 타카오 카논 (<span class="c_chara_oblivionis_sakiko">토가와 사키코/오블리비오니스</span> 역, 2002년생)</li>
+  </ul>
+ </li>
+</ul>
+
 <ul class="i_date" id="d_912" style="display: list-item;">
  <li>9월 12일 <span class="i_weekday"></span>
   <ul class="i_list">
@@ -809,7 +827,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_1103" style="display: list-item;">
  <li>11월 3일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="chara_pl" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_maya">야마토 마야</span> (<span class="t_pl">Pastel*Palettes</span>/Dr.)</li>
+   <li class="chara_pl" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_maya">야마토 마야</span> (<span class="t_pl">Pastel*Palettes</span>/Dr.)</li>
   </ul>
  </li>
 </ul>
@@ -817,7 +835,8 @@ $(document).ready(function(){
 <ul class="i_date" id="d_1110" style="display: list-item;">
  <li>11월 10일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_hh" style="display: list-item;"><b>성우 생일:</b> 타도코로 아즈사 (<span class="c_chara_kaoru">세타 카오루</span> 역, 1993년생)</li>
+   <li class="voices_hh" style="display: list-item;"><b>성우 생일:</b> 타도코로 아즈사 (<span class="c_chara_kaoru">세타 카오루</span> 역, 1993년생)</li>
+   <li class="voices_am" style="display: list-item;"><b>성우 생일:</b> 사사키 리코 (<span class="c_chara_doloris_uika">미스미 우이카/돌로리스</span> 역, 1997년생)
   </ul>
  </li>
 </ul>
@@ -833,8 +852,8 @@ $(document).ready(function(){
 <ul class="i_date" id="d_1119" style="display: list-item;">
  <li>11월 19일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="chara_mf" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_rui">야시오 루이</span> (<span class="t_mf">Morfonica</span>/Vn.)</li>
-    <li class="voices_etc" style="display: list-item;"><b>성우 생일:</b> 미나미 사키 (타이코 사토미 역, 생년 불명)</li>
+   <li class="chara_mf" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_rui">야시오 루이</span> (<span class="t_mf">Morfonica</span>/Vn.)</li>
+   <li class="voices_etc" style="display: list-item;"><b>성우 생일:</b> 미나미 사키 (타이코 사토미 역, 생년 불명)</li>
   </ul>
  </li>
 </ul>
@@ -929,6 +948,14 @@ $(document).ready(function(){
  <li>12월 27일 <span class="i_weekday"></span>
   <ul class="i_list">
     <li class="chara_pl" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_aya">마루야마 아야</span> (<span class="t_pl">Pastel*Palettes</span>/Vo.)</li>
+  </ul>
+ </li>
+</ul>
+
+<ul class="i_date" id="d_1231" style="display: list-item;">
+ <li>12월 31일 <span class="i_weekday"></span>
+  <ul class="i_list">
+   <li class="voices_am" style="display: list-item;"><b>성우 생일:</b> 요네자와 아카네 (<span class="c_chara_amoris_nyamu">유텐지 냐무/아모리스</span> 역, 1998년생)</li>
   </ul>
  </li>
 </ul>

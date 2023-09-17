@@ -291,6 +291,18 @@ list-style-type: none;
 .c_chara_soyo{color: #FFDD88;}
 .c_chara_taki{color: #AA77BB;}
 
+/* Ave Mujica */
+#s_am{background-color: #881144;}
+#s_am a{color: #FFFFFF !important;}
+.t_am{color: #881144;}
+
+.c_chara_timoris_umiri{color: #335566;}
+.c_chara_doloris_uika{color: #BB9955;}
+.c_chara_mortis_mutsumi{color: #779977;}
+.c_chara_amoris_nyamu{color: #BB4477;}
+.c_chara_oblivionis_sakiko{color: #7799DD;}
+
+
 #date_list,#overall_lists,#container_filter,.blockcontainer{
 padding: 0.5em;
 margin: auto;
