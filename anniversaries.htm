@@ -19,6 +19,7 @@ $(document).ready(function(){
  highlightToday();
  dispDateNow();
  displayWeekdayYearNow();
+ displayAnniversaryYearCount();
  setInterval("dispDateNow();",200);
  setInterval("highlightToday();",200);
 
@@ -91,7 +92,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_101" style="display: list-item;">
  <li>1월 1일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="anniv_pp" style="display: list-item;"><b>기념일:</b> <span class="t_pp">Poppin'Party</span> 단독 극장판 [팝핀' 드림!] 현지 개봉일 (2022년)</li>
+    <li class="anniv_pp" data-foundyear="2022" style="display: list-item;"><b>기념일:</b> <span class="t_pp">Poppin'Party</span> 단독 극장판 [팝핀' 드림!] 현지 개봉일 (2022년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -99,7 +100,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_102" style="display: list-item;">
  <li>1월 2일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_rs" style="display: list-item;"><b>성우 생일:</b> 아케사카 사토미 (前 <span class="c_chara_rinko">시로카네 린코</span> 역, 1988년생)</li>
+    <li class="voices_rs" data-birthyear="1988" style="display: list-item;"><b>성우 생일:</b> 아케사카 사토미 (前 <span class="c_chara_rinko">시로카네 린코</span> 역, 1988년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -107,7 +108,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_103" style="display: list-item;">
  <li>1월 3일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 뱅드림! TVA 2기 현지 방영 시작일 (2019년)</li>
+    <li class="anniv_bd" data-foundyear="2019" style="display: list-item;"><b>기념일:</b> 뱅드림! TVA 2기 현지 방영 시작일 (2019년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -115,7 +116,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_105" style="display: list-item;">
  <li>1월 5일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_mg" style="display: list-item;"><b>성우 생일:</b> 아오키 히나 (<span class="c_chara_rana">카나메 라나</span> 역, 2000년생)</li>
+    <li class="voices_mg" data-birthyear="2000" style="display: list-item;"><b>성우 생일:</b> 아오키 히나 (<span class="c_chara_rana">카나메 라나</span> 역, 2000년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -131,7 +132,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_110" style="display: list-item;">
  <li>1월 10일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_etc" style="display: list-item;"><b>성우 생일:</b> 후쿠엔 미사토 (우미노 나츠키 역, 1989년생)</li>
+    <li class="voices_etc" data-birthyear="1989" style="display: list-item;"><b>성우 생일:</b> 후쿠엔 미사토 (우미노 나츠키 역, 1989년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -140,9 +141,9 @@ $(document).ready(function(){
  <li>1월 13일 <span class="i_weekday"></span>
   <ul class="i_list">
     <li class="chara_ra" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_layer_rei">레이어/와카나 레이</span> (<span class="t_ra">RAISE A SUILEN</span>/Ba. &amp; Vo.)</li>
-    <li class="voices_ag" style="display: list-item;"><b>성우 생일:</b> 미사와 사치카 (<span class="c_chara_moca">아오바 모카</span> 역, 1993년생)</li>
-    <li class="voices_ra" style="display: list-item;"><b>성우 생일:</b> Raychell (<span class="c_chara_layer_rei">레이어/와카나 레이</span> 역, 1985년생)</li>
-    <li class="anniv_ra" style="display: list-item;"><b>기념일:</b> <span class="t_ra">RAISE A SUILEN</span> (당시 THE THIRD[仮]) 라이브 밴드 결성일 (2018년)</li>
+    <li class="voices_ag" data-birthyear="1993" style="display: list-item;"><b>성우 생일:</b> 미사와 사치카 (<span class="c_chara_moca">아오바 모카</span> 역, 1993년생<span class="age_now"></span>)</li>
+    <li class="voices_ra" data-birthyear="1985" style="display: list-item;"><b>성우 생일:</b> Raychell (<span class="c_chara_layer_rei">레이어/와카나 레이</span> 역, 1985년생<span class="age_now"></span>)</li>
+    <li class="anniv_ra" data-foundyear="2018" style="display: list-item;"><b>기념일:</b> <span class="t_ra">RAISE A SUILEN</span> (당시 THE THIRD[仮]) 라이브 밴드 결성일 (2018년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -150,7 +151,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_121" style="display: list-item;">
  <li>1월 21일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 뱅드림! TVA 1기 현지 방영 시작일 (2017년)</li>
+   <li class="anniv_bd" data-foundyear="2017" style="display: list-item;"><b>기념일:</b> 뱅드림! TVA 1기 현지 방영 시작일 (2017년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -158,7 +159,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_123" style="display: list-item;">
  <li>1월 23일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 뱅드림! TVA 3기 현지 방영 시작일 (2020년)</li>
+    <li class="anniv_bd" data-foundyear="2020" style="display: list-item;"><b>기념일:</b> 뱅드림! TVA 3기 현지 방영 시작일 (2020년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -166,7 +167,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_129" style="display: list-item;">
  <li>1월 29일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_ag" style="display: list-item;"><b>성우 생일:</b> 사쿠라 아야네 (<span class="c_chara_ran">미타케 란</span> 역, 1994년생)</li>
+    <li class="voices_ag" data-birthyear="1994" style="display: list-item;"><b>성우 생일:</b> 사쿠라 아야네 (<span class="c_chara_ran">미타케 란</span> 역, 1994년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -176,7 +177,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_203" style="display: list-item;">
  <li>2월 3일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_ra" style="display: list-item;"><b>성우 생일:</b> 코하라 리코 (<span class="c_chara_lock_rokka">록/아사히 롯카</span> 역, 1990년생)</li>
+    <li class="voices_ra" data-birthyear="1990" style="display: list-item;"><b>성우 생일:</b> 코하라 리코 (<span class="c_chara_lock_rokka">록/아사히 롯카</span> 역, 1990년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -192,7 +193,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_206" style="display: list-item;">
  <li>2월 6일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> [뱅드림! 걸즈 밴드 파티!](걸파) 한국어판 런칭일 (2018년)</li>
+    <li class="anniv_bd" data-foundyear="2018" style="display: list-item;"><b>기념일:</b> [뱅드림! 걸즈 밴드 파티!](걸파) 한국어판 런칭일 (2018년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -208,7 +209,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_218" style="display: list-item;">
  <li>2월 18일 <span class="i_weekday"></span>
   <ul class="i_list">
-   <li class="voices_am" style="display: list-item;"><b>성우 생일:</b> 와타베 유즈키 (<span class="c_chara_mortis_mutsumi">와카바 무츠미/모르티스</span> 역, 2003년생)</li>
+   <li class="voices_am" data-birthyear="2003" style="display: list-item;"><b>성우 생일:</b> 와타베 유즈키 (<span class="c_chara_mortis_mutsumi">와카바 무츠미/모르티스</span> 역, 2003년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -233,7 +234,7 @@ $(document).ready(function(){
  <li>2월 28일 <span class="i_weekday"></span>
   <ul class="i_list">
     <li class="chara_hh" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_kaoru">세타 카오루</span> (<span class="t_hh">헬로, 해피 월드!</span>/Gt.)</li>
-    <li class="anniv_bd anniv_pp" style="display: list-item;"><b>기념일:</b> <b>뱅드림! 프로젝트 발족일</b> 겸 <span class="t_pp">Poppin'Party</span> 라이브 밴드 결성일 (2015년)</li>
+    <li class="anniv_bd anniv_pp" data-foundyear="2015" style="display: list-item;"><b>기념일:</b> <b>뱅드림! 프로젝트 발족일</b> 겸 <span class="t_pp">Poppin'Party</span> 라이브 밴드 결성일 (2015년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -244,7 +245,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_314" style="display: list-item;">
  <li>3월 14일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_mg" style="display: list-item;"><b>성우 생일:</b> 코히나타 미카 (<span class="c_chara_soyo">나가사키 소요</span> 역, 2000년생)</li>
+    <li class="voices_mg" data-birthyear="2000" style="display: list-item;"><b>성우 생일:</b> 코히나타 미카 (<span class="c_chara_soyo">나가사키 소요</span> 역, 2000년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -252,7 +253,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_315" style="display: list-item;">
  <li>3월 15일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_hh" style="display: list-item;"><b>성우 생일:</b> 토요타 모에 (<span class="c_chara_kanon">마츠바라 카논</span> 역, 1995년생)</li>
+    <li class="voices_hh" data-birthyear="1995" style="display: list-item;"><b>성우 생일:</b> 토요타 모에 (<span class="c_chara_kanon">마츠바라 카논</span> 역, 1995년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -260,8 +261,8 @@ $(document).ready(function(){
 <ul class="i_date" id="d_316" style="display: list-item;">
  <li>3월 16일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> [뱅드림! 걸즈 밴드 파티!](걸파) 런칭일 (일본판 기준, 2017년)</li>
-    <li class="voices_rs" style="display: list-item;"><b>성우 생일:</b> 쿠도 하루카 (<span class="c_chara_sayo">히카와 사요</span> 역, 1989년생)</li>
+    <li class="anniv_bd" data-foundyear="2017" style="display: list-item;"><b>기념일:</b> [뱅드림! 걸즈 밴드 파티!](걸파) 런칭일 (일본판 기준, 2017년<span class="age_now"></span>)</li>
+    <li class="voices_rs" data-birthyear="1989" style="display: list-item;"><b>성우 생일:</b> 쿠도 하루카 (<span class="c_chara_sayo">히카와 사요</span> 역, 1989년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -286,7 +287,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_324" style="display: list-item;">
  <li>3월 24일 <span class="i_weekday"></span>
   <ul class="i_list">
-   <li class="anniv_pp" style="display: list-item;"><b>기념일:</b> <span class="t_pp">Poppin'Party</span> 단독 극장판 [팝핀' 드림!] 국내 개봉일 (2022년)</li>
+   <li class="anniv_pp" data-foundyear="2022" style="display: list-item;"><b>기념일:</b> <span class="t_pp">Poppin'Party</span> 단독 극장판 [팝핀' 드림!] 국내 개봉일 (2022년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -302,7 +303,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_326" style="display: list-item;">
  <li>3월 26일 <span class="i_weekday"></span>
   <ul class="i_list">
-   <li class="voices_mg" style="display: list-item;"><b>성우 생일:</b> 요우미야 히나 (<span class="c_chara_tomori">타카마츠 토모리</span> 역, 2000년생)</li>
+   <li class="voices_mg" data-birthyear="2000" style="display: list-item;"><b>성우 생일:</b> 요우미야 히나 (<span class="c_chara_tomori">타카마츠 토모리</span> 역, 2000년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -310,7 +311,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_330" style="display: list-item;">
  <li>3월 30일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_etc" style="display: list-item;"><b>성우 생일:</b> 사사키 미코이 (와니베 나나나/나나베 역, 1991년생)</li>
+    <li class="voices_etc" data-birthyear="1991" style="display: list-item;"><b>성우 생일:</b> 사사키 미코이 (와니베 나나나/나나베 역, 1991년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -318,7 +319,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_331" style="display: list-item;">
  <li>3월 31일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_mf" style="display: list-item;"><b>성우 생일:</b> 니시오 유카 (<span class="c_chara_nanami">히로마치 나나미</span> 역, 1994년생)</li>
+    <li class="voices_mf" data-birthyear="1994" style="display: list-item;"><b>성우 생일:</b> 니시오 유카 (<span class="c_chara_nanami">히로마치 나나미</span> 역, 1994년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -338,7 +339,7 @@ $(document).ready(function(){
  <li>4월 10일 <span class="i_weekday"></span>
   <ul class="i_list">
     <li class="chara_ag" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_ran">미타케 란</span> (<span class="t_ag">Afterglow</span>/Vo. &amp; Gt.)</li>
-    <li class="voices_hh" style="display: list-item;"><b>성우 생일:</b> 쿠로사와 토모요 (<span class="c_chara_michelle">미셸</span>/<span class="c_chara_misaki">오쿠사와 미사키</span> 역, 1996년생)</li>
+    <li class="voices_hh" data-birthyear="1996" style="display: list-item;"><b>성우 생일:</b> 쿠로사와 토모요 (<span class="c_chara_michelle">미셸</span>/<span class="c_chara_misaki">오쿠사와 미사키</span> 역, 1996년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -354,7 +355,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_417" style="display: list-item;">
  <li>4월 17일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_mf" style="display: list-item;"><b>성우 생일:</b> 스구타 히나 (<span class="c_chara_touko">키리가야 토우코</span> 역, 1995년생)</li>
+    <li class="voices_mf" data-birthyear="1995" style="display: list-item;"><b>성우 생일:</b> 스구타 히나 (<span class="c_chara_touko">키리가야 토우코</span> 역, 1995년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -362,7 +363,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_420" style="display: list-item;">
  <li>4월 20일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_mf" style="display: list-item;"><b>성우 생일:</b> 신도 아마네 (<span class="c_chara_mashiro">쿠라타 마시로</span> 역, 2004년생)</li>
+    <li class="voices_mf" data-birthyear="2004" style="display: list-item;"><b>성우 생일:</b> 신도 아마네 (<span class="c_chara_mashiro">쿠라타 마시로</span> 역, 2004년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -370,7 +371,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_423" style="display: list-item;">
  <li>4월 23일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="anniv_rs" style="display: list-item;"><b>기념일:</b> <span class="t_rs">Roselia</span> 단독 극장판 [Episode of Roselia] 1편 (&quot;약속&quot;) 현지 개봉일 (2021년)</li>
+    <li class="anniv_rs" data-foundyear="2021" style="display: list-item;"><b>기념일:</b> <span class="t_rs">Roselia</span> 단독 극장판 [Episode of Roselia] 1편 (&quot;약속&quot;) 현지 개봉일 (2021년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -378,7 +379,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_429" style="display: list-item;">
  <li>4월 29일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="anniv_mg" style="display: list-item;"><b>기념일:</b> <span class="t_mg">MyGO!!!!!</span> 라이브 밴드 결성일 (2022년)</li>
+    <li class="anniv_mg" data-foundyear="2022" style="display: list-item;"><b>기념일:</b> <span class="t_mg">MyGO!!!!!</span> 라이브 밴드 결성일 (2022년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -405,8 +406,8 @@ $(document).ready(function(){
 <ul class="i_date" id="d_515" style="display: list-item;">
  <li>5월 15일 <span class="i_weekday"></span>
   <ul class="i_list">
-   <li class="voices_mg" style="display: list-item;"><b>성우 생일:</b> 하야시 코코 (<span class="c_chara_taki">시이나 타키</span> 역, 2002년생)</li>
-   <li class="voices_etc" style="display: list-item;"><b>성우 생일:</b> 오자키 유카 (토야마 아스카 역, 1993년생)</li>
+   <li class="voices_mg" data-birthyear="2002" style="display: list-item;"><b>성우 생일:</b> 하야시 코코 (<span class="c_chara_taki">시이나 타키</span> 역, 2002년생<span class="age_now"></span>)</li>
+   <li class="voices_etc" data-birthyear="1993" style="display: list-item;"><b>성우 생일:</b> 오자키 유카 (토야마 아스카 역, 1993년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -415,7 +416,7 @@ $(document).ready(function(){
  <li>5월 19일 <span class="i_weekday"></span>
   <ul class="i_list">
    <li class="chara_pp" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_saaya">야마부키 사아야</span> (<span class="t_pp">Poppin'Party</span>/Dr.)</li>
-   <li class="voices_am" style="display: list-item;"><b>성우 생일:</b> 오카다 메이 (<span class="c_chara_timoris_umiri">야하타 우미리/티모리스</span> 역, 1996년생)</li>
+   <li class="voices_am" data-birthyear="1996" style="display: list-item;"><b>성우 생일:</b> 오카다 메이 (<span class="c_chara_timoris_umiri">야하타 우미리/티모리스</span> 역, 1996년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -423,7 +424,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_522" style="display: list-item;">
  <li>5월 22일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_ra" style="display: list-item;"><b>성우 생일:</b> 쿠라치 레오 (<span class="c_chara_pareo_reona">파레오/뉴바라 레오나</span> 역, 1997년생)</li>
+    <li class="voices_ra" data-birthyear="1997" style="display: list-item;"><b>성우 생일:</b> 쿠라치 레오 (<span class="c_chara_pareo_reona">파레오/뉴바라 레오나</span> 역, 1997년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -442,7 +443,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_603" style="display: list-item;">
  <li>6월 3일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="anniv_rs" style="display: list-item;"><b>기념일:</b> <span class="t_rs">Roselia</span> 단독 극장판 [Episode of Roselia] 1편 (&quot;약속&quot;) 국내 개봉일 (2021년)</li>
+    <li class="anniv_rs" data-foundyear="2021" style="display: list-item;"><b>기념일:</b> <span class="t_rs">Roselia</span> 단독 극장판 [Episode of Roselia] 1편 (&quot;약속&quot;) 국내 개봉일 (2021년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -458,7 +459,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_618" style="display: list-item;">
  <li>6월 18일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_pl" style="display: list-item;"><b>성우 생일:</b> 나카가미 이쿠미 (<span class="c_chara_maya">야마토 마야</span> 역, 1983년생)</li>
+    <li class="voices_pl" data-birthyear="1983" style="display: list-item;"><b>성우 생일:</b> 나카가미 이쿠미 (<span class="c_chara_maya">야마토 마야</span> 역, 1983년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -466,7 +467,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_624" style="display: list-item;">
  <li>6월 24일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_rs" style="display: list-item;"><b>성우 생일:</b> 엔도 유리카 (前 <span class="c_chara_lisa">이마이 리사</span> 역, 1994년생)</li>
+    <li class="voices_rs" data-birthyear="1994" style="display: list-item;"><b>성우 생일:</b> 엔도 유리카 (前 <span class="c_chara_lisa">이마이 리사</span> 역, 1994년생<span class="age_now"></span>)</li>
     <li class="voices_mf" style="display: list-item;"><b>성우 생일:</b> mika (<span class="c_chara_tsukushi">후타바 츠쿠시</span> 역, 생년 불명)</li>
   </ul>
  </li>
@@ -475,7 +476,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_625" style="display: list-item;">
  <li>6월 25일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="anniv_rs" style="display: list-item;"><b>기념일:</b> <span class="t_rs">Roselia</span> 단독 극장판 [Episode of Roselia] 2편 (&quot;Song I am.&quot;) 현지 개봉일 (2021년)</li>
+    <li class="anniv_rs" data-foundyear="2021" style="display: list-item;"><b>기념일:</b> <span class="t_rs">Roselia</span> 단독 극장판 [Episode of Roselia] 2편 (&quot;Song I am.&quot;) 현지 개봉일 (2021년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -491,7 +492,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_628" style="display: list-item;">
  <li>6월 28일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_etc" style="display: list-item;"><b>성우 생일:</b> 미모리 스즈코 (우시고메 유리 역, 1986년생)</li>
+    <li class="voices_etc" data-birthyear="1986" style="display: list-item;"><b>성우 생일:</b> 미모리 스즈코 (우시고메 유리 역, 1986년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -499,7 +500,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_629" style="display: list-item;">
  <li>6월 29일 <span class="i_weekday"></span>
   <ul class="i_list">
-   <li class="anniv_mg" style="display: list-item;"><b>기념일:</b> <span class="t_mg">MyGO!!!!!</span> 단독 TVA [BanG Dream! It's MyGO!!!!!] TVA 현지 방영 시작일 (2023년)</li>
+   <li class="anniv_mg" data-foundyear="2023" style="display: list-item;"><b>기념일:</b> <span class="t_mg">MyGO!!!!!</span> 단독 TVA [BanG Dream! It's MyGO!!!!!] TVA 현지 방영 시작일 (2023년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -517,8 +518,8 @@ $(document).ready(function(){
 <ul class="i_date" id="d_705" style="display: list-item;">
  <li>7월 5일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_ra" style="display: list-item;"><b>성우 생일:</b> 츠무기 리사 (<span class="c_chara_chuchu_chiyu">츄츄/타마데 치유</span> 역, 1996년생)</li>
-    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 걸파☆피코 애니메이션 1기 방영 시작일 (2018년)</li>
+    <li class="voices_ra" data-birthyear="1996" style="display: list-item;"><b>성우 생일:</b> 츠무기 리사 (<span class="c_chara_chuchu_chiyu">츄츄/타마데 치유</span> 역, 1996년생<span class="age_now"></span>)</li>
+    <li class="anniv_bd" data-foundyear="2018" style="display: list-item;"><b>기념일:</b> 걸파☆피코 애니메이션 1기 방영 시작일 (2018년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -526,7 +527,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_707" style="display: list-item;">
  <li>7월 7일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 걸파☆피코 애니메이션 2기 방영 시작일 (2020년)</li>
+    <li class="anniv_bd" data-foundyear="2020" style="display: list-item;"><b>기념일:</b> 걸파☆피코 애니메이션 2기 방영 시작일 (2020년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -534,7 +535,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_710" style="display: list-item;">
  <li>7월 10일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_mg" style="display: list-item;"><b>성우 생일:</b> 타테이시 린 (<span class="c_chara_anon">치하야 아논</span> 역, 2001년생)</li>
+    <li class="voices_mg" data-birthyear="2001" style="display: list-item;"><b>성우 생일:</b> 타테이시 린 (<span class="c_chara_anon">치하야 아논</span> 역, 2001년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -550,7 +551,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_716" style="display: list-item;">
  <li>7월 16일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_ag" style="display: list-item;"><b>성우 생일:</b> 히카사 요코 (<span class="c_chara_tomoe">우다가와 토모에</span> 역, 1985년생)</li>
+    <li class="voices_ag" data-birthyear="1985" style="display: list-item;"><b>성우 생일:</b> 히카사 요코 (<span class="c_chara_tomoe">우다가와 토모에</span> 역, 1985년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -566,7 +567,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_720" style="display: list-item;">
  <li>7월 20일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_ra" style="display: list-item;"><b>성우 생일:</b> 나츠메 (<span class="c_chara_masking_masuki">마스킹/사토 마스키</span> 역, 1986년생)</li>
+    <li class="voices_ra" data-birthyear="1986" style="display: list-item;"><b>성우 생일:</b> 나츠메 (<span class="c_chara_masking_masuki">마스킹/사토 마스키</span> 역, 1986년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -574,7 +575,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_728" style="display: list-item;">
  <li>7월 28일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="anniv_mf" style="display: list-item;"><b>기념일:</b> <span class="t_mf">Morfonica</span> 단독 OVA [Morfonication] 최초 공개일 (2022년)</li>
+    <li class="anniv_mf" data-foundyear="2022" style="display: list-item;"><b>기념일:</b> <span class="t_mf">Morfonica</span> 단독 OVA [Morfonication] 최초 공개일 (2022년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -608,7 +609,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_810" style="display: list-item;">
  <li>8월 10일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_pl" style="display: list-item;"><b>성우 생일:</b> 오자와 아리 (<span class="c_chara_hina">히카와 히나</span> 역, 1992년생)</li>
+    <li class="voices_pl" data-birthyear="1992" style="display: list-item;"><b>성우 생일:</b> 오자와 아리 (<span class="c_chara_hina">히카와 히나</span> 역, 1992년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -616,7 +617,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_817" style="display: list-item;">
  <li>8월 17일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_pp" style="display: list-item;"><b>성우 생일:</b> 이토 아야사 (<span class="c_chara_arisa">이치가야 아리사</span> 역, 1996년생)</li>
+    <li class="voices_pp" data-birthyear="1996" style="display: list-item;"><b>성우 생일:</b> 이토 아야사 (<span class="c_chara_arisa">이치가야 아리사</span> 역, 1996년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -624,7 +625,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_818" style="display: list-item;">
  <li>8월 18일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_hh" style="display: list-item;"><b>성우 생일:</b> 요시다 유리 (<span class="c_chara_hagumi">키타자와 하구미</span> 역, 1992년생)</li>
+    <li class="voices_hh" data-birthyear="1992" style="display: list-item;"><b>성우 생일:</b> 요시다 유리 (<span class="c_chara_hagumi">키타자와 하구미</span> 역, 1992년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -632,7 +633,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_820" style="display: list-item;">
  <li>8월 20일 <span class="i_weekday"></span>
   <ul class="i_list">
-   <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 극장판 필름 라이브 2기 현지 개봉일 (2021년)</li>
+   <li class="anniv_bd" data-foundyear="2021" style="display: list-item;"><b>기념일:</b> 극장판 필름 라이브 2기 현지 개봉일 (2021년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -667,7 +668,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_909" style="display: list-item;">
  <li>9월 9일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="anniv_rs" style="display: list-item;"><b>기념일:</b> <span class="t_rs">Roselia</span> 단독 극장판 [Episode of Roselia] 2편 (&quot;Song I am.&quot;) 국내 개봉일 (2021년)</li>
+    <li class="anniv_rs" data-foundyear="2021" style="display: list-item;"><b>기념일:</b> <span class="t_rs">Roselia</span> 단독 극장판 [Episode of Roselia] 2편 (&quot;Song I am.&quot;) 국내 개봉일 (2021년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -675,7 +676,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_910" style="display: list-item;">
  <li>9월 10일 <span class="i_weekday"></span>
   <ul class="i_list">
-   <li class="voices_am" style="display: list-item;"><b>성우 생일:</b> 타카오 카논 (<span class="c_chara_oblivionis_sakiko">토가와 사키코/오블리비오니스</span> 역, 2002년생)</li>
+   <li class="voices_am" data-birthyear="2002" style="display: list-item;"><b>성우 생일:</b> 타카오 카논 (<span class="c_chara_oblivionis_sakiko">토가와 사키코/오블리비오니스</span> 역, 2002년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -683,7 +684,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_912" style="display: list-item;">
  <li>9월 12일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_rs" style="display: list-item;"><b>성우 생일:</b> 나카시마 유키 (現 <span class="c_chara_lisa">이마이 리사</span> 역, 1997년생)</li>
+    <li class="voices_rs" data-birthyear="1997" style="display: list-item;"><b>성우 생일:</b> 나카시마 유키 (現 <span class="c_chara_lisa">이마이 리사</span> 역, 1997년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -691,8 +692,8 @@ $(document).ready(function(){
 <ul class="i_date" id="d_913" style="display: list-item;">
  <li>9월 13일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_pp" style="display: list-item;"><b>성우 생일:</b> 오오하시 아야카 (<span class="c_chara_saaya">야마부키 사아야</span> 역, 1994년생)</li>
-    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 극장판 필름 라이브 1기 현지 개봉일 (2019년)</li>
+    <li class="voices_pp" data-birthyear="1994" style="display: list-item;"><b>성우 생일:</b> 오오하시 아야카 (<span class="c_chara_saaya">야마부키 사아야</span> 역, 1994년생<span class="age_now"></span>)</li>
+    <li class="anniv_bd" data-foundyear="2019" style="display: list-item;"><b>기념일:</b> 극장판 필름 라이브 1기 현지 개봉일 (2019년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -700,7 +701,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_914" style="display: list-item;">
  <li>9월 14일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_pl" style="display: list-item;"><b>성우 생일:</b> 하타 사와코 (<span class="c_chara_eve">와카미야 이브</span> 역, 1988년생)</li>
+    <li class="voices_pl" data-birthyear="1988" style="display: list-item;"><b>성우 생일:</b> 하타 사와코 (<span class="c_chara_eve">와카미야 이브</span> 역, 1988년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -716,8 +717,8 @@ $(document).ready(function(){
 <ul class="i_date" id="d_916" style="display: list-item;">
  <li>9월 16일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="anniv_bd anniv_rs" style="display: list-item;"><b>기념일:</b> <span class="t_rs">Roselia</span> 라이브 밴드 결성일 (2016년)</li>
-    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> [뱅드림! 걸즈 밴드 파티!](걸파) 닌텐도 스위치판 발매일 (현지 기준, 2021년)</li>
+    <li class="anniv_bd anniv_rs" data-foundyear="2016" style="display: list-item;"><b>기념일:</b> <span class="t_rs">Roselia</span> 라이브 밴드 결성일 (2016년<span class="age_now"></span>)</li>
+    <li class="anniv_bd" data-foundyear="2021" style="display: list-item;"><b>기념일:</b> [뱅드림! 걸즈 밴드 파티!](걸파) 닌텐도 스위치판 발매일 (현지 기준, 2021년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -725,7 +726,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_926" style="display: list-item;">
  <li>9월 26일 <span class="i_weekday"></span>
   <ul class="i_list">
-   <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 극장판 필름 라이브 1기 국내 개봉일 (2019년)</li>
+   <li class="anniv_bd" data-foundyear="2019" style="display: list-item;"><b>기념일:</b> 극장판 필름 라이브 1기 국내 개봉일 (2019년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -743,7 +744,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_1007" style="display: list-item;">
  <li>10월 7일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 걸파☆피코 애니메이션 3기 방영 시작일 (2021년)</li>
+    <li class="anniv_bd" data-foundyear="2021" style="display: list-item;"><b>기념일:</b> 걸파☆피코 애니메이션 3기 방영 시작일 (2021년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -751,7 +752,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_1010" style="display: list-item;">
  <li>10월 10일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_pp" style="display: list-item;"><b>성우 생일:</b> 오오츠카 사에 (<span class="c_chara_tae">하나조노 타에</span> 역, 1994년생)</li>
+    <li class="voices_pp" data-birthyear="1994" style="display: list-item;"><b>성우 생일:</b> 오오츠카 사에 (<span class="c_chara_tae">하나조노 타에</span> 역, 1994년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -759,7 +760,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_1012" style="display: list-item;">
  <li>10월 12일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_hh" style="display: list-item;"><b>성우 생일:</b> 이토 미쿠 (<span class="c_chara_kokoro">츠루마키 코코로</span> 역, 1996년생)</li>
+    <li class="voices_hh" data-birthyear="1996" style="display: list-item;"><b>성우 생일:</b> 이토 미쿠 (<span class="c_chara_kokoro">츠루마키 코코로</span> 역, 1996년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -768,7 +769,7 @@ $(document).ready(function(){
  <li>10월 17일 <span class="i_weekday"></span>
   <ul class="i_list">
     <li class="chara_rs" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_rinko">시로카네 린코</span> (<span class="t_rs">Roselia</span>/Kb.)</li>
-    <li class="voices_rs" style="display: list-item;"><b>성우 생일:</b> 아이바 아이나 (<span class="c_chara_yukina">미나토 유키나</span> 역, 1988년생)</li>
+    <li class="voices_rs" data-birthyear="1988" style="display: list-item;"><b>성우 생일:</b> 아이바 아이나 (<span class="c_chara_yukina">미나토 유키나</span> 역, 1988년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -776,7 +777,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_1019" style="display: list-item;">
  <li>10월 19일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_mf" style="display: list-item;"><b>성우 생일:</b> Ayasa (<span class="c_chara_rui">야시오 루이</span> 역, 1991년생)</li>
+    <li class="voices_mf" data-birthyear="1991" style="display: list-item;"><b>성우 생일:</b> Ayasa (<span class="c_chara_rui">야시오 루이</span> 역, 1991년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -792,7 +793,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_1024" style="display: list-item;">
  <li>10월 24일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_rs" style="display: list-item;"><b>성우 생일:</b> 사쿠라가와 메구 (<span class="c_chara_ako">우다가와 아코</span> 역, 1988년생)</li>
+    <li class="voices_rs" data-birthyear="1988" style="display: list-item;"><b>성우 생일:</b> 사쿠라가와 메구 (<span class="c_chara_ako">우다가와 아코</span> 역, 1988년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -800,7 +801,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_1025" style="display: list-item;">
  <li>10월 25일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_pp" style="display: list-item;"><b>성우 생일:</b> 니시모토 리미 (<span class="c_chara_rimi">우시고메 리미</span> 역, 1994년생)</li>
+    <li class="voices_pp" data-birthyear="1994" style="display: list-item;"><b>성우 생일:</b> 니시모토 리미 (<span class="c_chara_rimi">우시고메 리미</span> 역, 1994년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -835,8 +836,8 @@ $(document).ready(function(){
 <ul class="i_date" id="d_1110" style="display: list-item;">
  <li>11월 10일 <span class="i_weekday"></span>
   <ul class="i_list">
-   <li class="voices_hh" style="display: list-item;"><b>성우 생일:</b> 타도코로 아즈사 (<span class="c_chara_kaoru">세타 카오루</span> 역, 1993년생)</li>
-   <li class="voices_am" style="display: list-item;"><b>성우 생일:</b> 사사키 리코 (<span class="c_chara_doloris_uika">미스미 우이카/돌로리스</span> 역, 1997년생)
+   <li class="voices_hh" data-birthyear="1993" style="display: list-item;"><b>성우 생일:</b> 타도코로 아즈사 (<span class="c_chara_kaoru">세타 카오루</span> 역, 1993년생<span class="age_now"></span>)</li>
+   <li class="voices_am" data-birthyear="1997" style="display: list-item;"><b>성우 생일:</b> 사사키 리코 (<span class="c_chara_doloris_uika">미스미 우이카/돌로리스</span> 역, 1997년생<span class="age_now"></span>)
   </ul>
  </li>
 </ul>
@@ -844,7 +845,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_1118" style="display: list-item;">
  <li>11월 18일 <span class="i_weekday"></span>
   <ul class="i_list">
-   <li class="anniv_bd" style="display: list-item;"><b>기념일:</b> 극장판 필름 라이브 2기 국내 개봉일 (2021년)</li>
+   <li class="anniv_bd" data-foundyear="2021" style="display: list-item;"><b>기념일:</b> 극장판 필름 라이브 2기 국내 개봉일 (2021년<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -861,7 +862,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_1122" style="display: list-item;">
  <li>11월 22일 <span class="i_weekday"></span>
   <ul class="i_list">
-   <li class="voices_pl" style="display: list-item;"><b>성우 생일:</b> 마에시마 아미 (<span class="c_chara_aya">마루야마 아야</span> 역, 1997년생)</li>
+   <li class="voices_pl" data-birthyear="1997" style="display: list-item;"><b>성우 생일:</b> 마에시마 아미 (<span class="c_chara_aya">마루야마 아야</span> 역, 1997년생<span class="age_now"></span>)</li>
    <li class="chara_mg" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_tomori">타카마츠 토모리</span> (<span class="t_mg">MyGO!!!!!</span>/Vo.)</li>
   </ul>
  </li>
@@ -870,7 +871,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_1126" style="display: list-item;">
  <li>11월 26일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_ag" style="display: list-item;"><b>성우 생일:</b> 카토 에미리 (<span class="c_chara_himari">우에하라 히마리</span> 역, 1983년생)</li>
+    <li class="voices_ag" data-birthyear="1983" style="display: list-item;"><b>성우 생일:</b> 카토 에미리 (<span class="c_chara_himari">우에하라 히마리</span> 역, 1983년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -878,7 +879,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_1127" style="display: list-item;">
  <li>11월 27일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_etc" style="display: list-item;"><b>성우 생일:</b> 킷타 이즈미 (우자와 리이 역, 1984년생)</li>
+    <li class="voices_etc" data-birthyear="1984" style="display: list-item;"><b>성우 생일:</b> 킷타 이즈미 (우자와 리이 역, 1984년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -906,7 +907,7 @@ $(document).ready(function(){
  <li>12월 16일 <span class="i_weekday"></span>
   <ul class="i_list">
     <li class="chara_mf" style="display: list-item;"><b>캐릭터(멤버) 생일:</b> <span class="c_chara_touko">키리가야 토우코</span> (<span class="t_mf">Morfonica</span>/Gt.)</li>
-    <li class="voices_ag" style="display: list-item;"><b>성우 생일:</b> 카네모토 히사코 (<span class="c_chara_tsugumi">하자와 츠구미</span> 역, 1987년생)</li>
+    <li class="voices_ag" data-birthyear="1987" style="display: list-item;"><b>성우 생일:</b> 카네모토 히사코 (<span class="c_chara_tsugumi">하자와 츠구미</span> 역, 1987년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -914,7 +915,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_1217" style="display: list-item;">
  <li>12월 17일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_etc" style="display: list-item;"><b>성우 생일:</b> 아사히나 마도카 (모리 후미카 역, 1993년생)</li>
+    <li class="voices_etc" data-birthyear="1993" style="display: list-item;"><b>성우 생일:</b> 아사히나 마도카 (모리 후미카 역, 1993년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -922,7 +923,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_1219" style="display: list-item;">
  <li>12월 19일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_pl" style="display: list-item;"><b>성우 생일:</b> 우에사카 스미레 (<span class="c_chara_chisato">시라사기 치사토</span> 역, 1991년생)</li>
+    <li class="voices_pl" data-birthyear="1991" style="display: list-item;"><b>성우 생일:</b> 우에사카 스미레 (<span class="c_chara_chisato">시라사기 치사토</span> 역, 1991년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -930,8 +931,8 @@ $(document).ready(function(){
 <ul class="i_date" id="d_1225" style="display: list-item;">
  <li>12월 25일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_pp" style="display: list-item;"><b>성우 생일:</b> <abbr title="본명: 테라카와 아이미">아이미</abbr> (<span class="c_chara_kasumi">토야마 카스미</span> 역, 1991년생)</li>
-    <li class="voices_bd" style="display: list-item;"><b>성우 생일:</b> 스자키 아야 (츠키시마 마리나 역, 1986년생)</li>
+    <li class="voices_pp" data-birthyear="1991" style="display: list-item;"><b>성우 생일:</b> <abbr title="본명: 테라카와 아이미">아이미</abbr> (<span class="c_chara_kasumi">토야마 카스미</span> 역, 1991년생<span class="age_now"></span>)</li>
+    <li class="voices_bd" data-birthyear="1986" style="display: list-item;"><b>성우 생일:</b> 스자키 아야 (츠키시마 마리나 역, 1986년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -939,7 +940,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_1226" style="display: list-item;">
  <li>12월 26일 <span class="i_weekday"></span>
   <ul class="i_list">
-    <li class="voices_etc" style="display: list-item;"><b>성우 생일:</b> 토쿠이 소라 (니쥬키 히나코 역, 1989년생)</li>
+    <li class="voices_etc" data-birthyear="1989" style="display: list-item;"><b>성우 생일:</b> 토쿠이 소라 (니쥬키 히나코 역, 1989년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>
@@ -955,7 +956,7 @@ $(document).ready(function(){
 <ul class="i_date" id="d_1231" style="display: list-item;">
  <li>12월 31일 <span class="i_weekday"></span>
   <ul class="i_list">
-   <li class="voices_am" style="display: list-item;"><b>성우 생일:</b> 요네자와 아카네 (<span class="c_chara_amoris_nyamu">유텐지 냐무/아모리스</span> 역, 1998년생)</li>
+   <li class="voices_am" data-birthyear="1998" style="display: list-item;"><b>성우 생일:</b> 요네자와 아카네 (<span class="c_chara_amoris_nyamu">유텐지 냐무/아모리스</span> 역, 1998년생<span class="age_now"></span>)</li>
   </ul>
  </li>
 </ul>

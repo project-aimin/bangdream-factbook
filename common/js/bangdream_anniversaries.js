@@ -198,5 +198,34 @@ function displayWeekdayYearNow(){
  }
 }
 
+
+function displayAnniversaryYearCount(){
+ var y = (new Date()).getFullYear();
+ for(s=1;s<=1231;s++){
+  if(document.getElementById("d_"+s) != null){
+   var m = Math.floor(s / 100);
+   var d = s % 100;
+   var n = (m * 100)+d;
+   var v = $(document.getElementById("d_"+s)).find("[class^='voices']");
+   for(k=0;k<v.length;k++){
+    if(typeof v[k].dataset["birthyear"] == "undefined"){continue;}
+    var age_v = y-(new Number(v[k].dataset["birthyear"]));
+    var checksum = (((new Date()).getMonth()+1) * 100)+d;
+    if(checksum < n){age_v--;}
+    v[k].getElementsByClassName("age_now")[0].innerHTML = `/만 ${age_v}세`;
+   }
+
+   var a = $(document.getElementById("d_"+s)).find("[class^='anniv']");
+   for(l=0;l<a.length;l++){
+    if(typeof a[l].dataset["foundyear"] == "undefined"){continue;}
+    var age_a = y-(new Number(a[l].dataset["foundyear"]));
+    var checksum = (((new Date()).getMonth()+1) * 100)+d;
+    if(checksum < n){age_a--;}
+    a[l].getElementsByClassName("age_now")[0].innerHTML = `, ${age_a}주년 경과`;
+   }
+  }
+ }
+}
+
 var cMessage = "오늘도 반짝반짝 두근두근!!";
 console.log("%c "+cMessage,"color:#FF5522;font-weight:bold;");
