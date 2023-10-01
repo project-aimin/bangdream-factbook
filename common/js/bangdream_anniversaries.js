@@ -203,7 +203,6 @@ function displayAnniversaryYearCount(){
  var y = (new Date()).getFullYear();
  for(s=1;s<=1231;s++){
   if(document.getElementById("d_"+s) != null){
-   var d = s % 100;
    var v = $(document.getElementById("d_"+s)).find("[class^='voices']");
    var a = $(document.getElementById("d_"+s)).find("[class^='anniv']");
    if(v.length > 0){
