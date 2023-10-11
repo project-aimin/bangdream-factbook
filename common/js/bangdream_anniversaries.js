@@ -217,7 +217,7 @@ function displayAnniversaryYearCount(){
     var age_a = y-(new Number(a[l].dataset["foundyear"]));
     var checksum_a = (((new Date()).getMonth()+1) * 100)+((new Date()).getDate());
     if(checksum_a < s){age_a--;}
-    a[l].getElementsByClassName("age_now")[0].innerHTML = (age_a == 0) ? ", 1년 미만 경과" : `, ${age_a}주년 경과`;
+    a[l].getElementsByClassName("age_now")[0].innerHTML = (age_a == 0) ? ", 1년 미만 경과" : ((age_a > 0) ? `, ${age_a}주년 경과` : ", 예정된 일정");
    }
   }
  }
