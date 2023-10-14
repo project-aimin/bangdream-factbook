@@ -31,7 +31,7 @@ font-size: 1em;
 }
 
 
-.pagelist{
+.pagelist,.notice{
 background-color: rgba(0,0,0,0.65);
 border-radius: 1em;
 width: 30vw;
