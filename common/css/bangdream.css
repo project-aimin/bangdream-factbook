@@ -45,15 +45,15 @@ margin-left: -0.5em;
 }
 
 @media ( max-width: 1280px ){
- .pagelist{width: 50vw;}
+ .pagelist,.notice{width: 50vw;}
 }
 
 @media ( max-width: 1024px ){
- .pagelist{width: 70vw;}
+ .pagelist,.notice{width: 70vw;}
 }
 
 @media ( max-width: 720px ){
- .pagelist{width: 90vw;}
+ .pagelist,.notice{width: 90vw;}
 }
 
 .pageentries{font-weight: bold;}
