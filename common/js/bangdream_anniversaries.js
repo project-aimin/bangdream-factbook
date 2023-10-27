@@ -138,7 +138,7 @@ function moveToMonthNow(){
  var monthNow = dateTimeNow.getMonth()+1;
  
  var destSect = document.getElementById("scroll_month_"+monthNow);
- if(typeof destSect.scrollIntoView !== "undefined"){destSect.scrollIntoView(true);}
+ if(typeof destSect.scrollIntoView !== "undefined"){destSect.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});}
  else{document.location.hash = "month_"+monthNow;}
 }
 
