@@ -302,6 +302,17 @@ list-style-type: none;
 .c_chara_amoris_nyamu{color: #BB4477;}
 .c_chara_oblivionis_sakiko{color: #7799DD;}
 
+/* 무한대 뮤 타입(버츄얼) */
+#s_vt{background-color: #FF9999;}
+#s_vt a{color: #000000 !important;}
+.t_vt{color: #FF9999;}
+
+.c_chara_vt_arale{color: #FFDD33;}
+.c_chara_vt_nonoka{color: #FFAACC;}
+.c_chara_vt_ritsu{color: #5588DD;}
+.c_chara_vt_miyako{color: #9977DD;}
+.c_chara_vt_yuno{color: #FF6688;}
+
 #date_list,#overall_lists,#container_filter,.blockcontainer{
 padding: 0.5em;
 margin: auto;
